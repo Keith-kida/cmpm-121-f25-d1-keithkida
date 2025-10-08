@@ -16,6 +16,7 @@ const upgradeButton = document.getElementById("upgrade") as HTMLButtonElement;
 
 let ramen: number = 0;
 let ramenPerSecond: number = 0;
+let displayedRamen: number = 0;
 
 // Manual click adds ramen
 ramenButton.addEventListener("click", () => {
@@ -38,6 +39,16 @@ setInterval(() => {
   ramen += ramenPerSecond;
   counterElement.textContent = ramen.toString();
   if (ramen >= 10) {
-    upgradeButton.disabled = false; // Enable button when enough ramen
+    upgradeButton.disabled = false;
   }
 }, 1000);
+
+// Smoothly animate the counter
+function animate() {
+
+  displayedRamen += (ramen - displayedRamen) * 0.1;
+  counterElement.textContent = Math.floor(displayedRamen).toString();
+
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
