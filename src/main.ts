@@ -45,7 +45,6 @@ setInterval(() => {
 
 // Smoothly animate the counter
 function animate() {
-
   displayedRamen += (ramen - displayedRamen) * 0.1;
   counterElement.textContent = Math.floor(displayedRamen).toString();
 
