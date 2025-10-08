@@ -29,9 +29,9 @@ upgradeButton.addEventListener("click", () => {
     ramen -= 10;
     ramenPerSecond += 1;
     counterElement.textContent = ramen.toString();
-    upgradeButton.disabled = true; 
+    upgradeButton.disabled = true;
+  }
 });
-
 
 // Automatically adds ramen once per second
 setInterval(() => {
