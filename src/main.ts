@@ -10,6 +10,7 @@ document.body.innerHTML = `
   `;
 
 // Add click handler
+
 const ramenButton = document.getElementById("Ramen")!;
 const counterElement = document.getElementById("counter")!;
 const upgradeButton = document.getElementById("upgrade") as HTMLButtonElement;
