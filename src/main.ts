@@ -1,17 +1,20 @@
-import exampleIconUrl from "./noun-paperclip-7598668-00449F.png";
+import chashuRamen from "./chashu-ramen-3d-icon-png-download-9666063.png";
+import beltimage from "./conveyor-belt.png";
+import chefimage from "./ramen-jiro-rice-soup-menu-png.png";
+import waiterimage from "./ramen-waiter.png";
 import "./style.css";
 
 document.body.innerHTML = `
-  <p>Example image asset: <img src="${exampleIconUrl}" class="icon" /></p>
+  <h1>WELCOME TO</h1>
   <h1>RAMEN COUNTER</h1>
   <p>Ramen Counter: <span id="counter">0</span></p>
   <p id="status">0 🍜/sec</p>
   <p id="upgrades">Chefs: 0 | Conveyer Belts: 0 | Waiters: 0</p>
 
-  <button id="Ramen">🍜</button>
-  <button id="Chefs" disabled>More Chefs(+1/sec, 10 🍜)</button>
-  <button id="Belts" disabled>More Conveyer Belts(+5/sec, 100 🍜)</button>
-  <button id="Waiters" disabled>More Waiters(+50/sec, 1000 🍜)</button>
+  <button id="Ramen"><img src="${chashuRamen}" class="icon" /></button>
+  <button id="Chefs" disabled>More Chefs<img src="${chefimage}" class="icon" /> (+1/sec, 10 🍜)</button>
+  <button id="Belts" disabled>More Conveyer <img src="${beltimage}" class="icon" /> (+5/sec, 100 🍜)</button>
+  <button id="Waiters" disabled>More Waiters <img src="${waiterimage}" class="icon" />  (+50/sec, 1000 🍜)</button>
   `;
 
 // Add click handler
