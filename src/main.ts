@@ -2,12 +2,32 @@ import chashuRamen from "./chashu-ramen-3d-icon-png-download-9666063.png";
 import beltimage from "./conveyor-belt.png";
 import deliveryimage from "./delivery-man.png";
 import managerimage from "./manager.png";
+import backgroundimage from "./ramen-backgound.png";
 import chefimage from "./ramen-jiro-rice-soup-menu-png.png";
 import waiterimage from "./ramen-waiter.png";
 import "./style.css";
 
 document.body.innerHTML = `
-  <div style="text-align: center;">
+  <div 
+    style="
+      text-align: center; 
+      background-image: url('${backgroundimage}');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center; 
+      min-height: 100vh;
+    "
+  >
+
+  <div style="
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 10px red;
+  ">
     <h1>WELCOME TO</h1>
     <h1>RAMEN COUNTER</h1>
     <p>Ramen Counter: <span id="counter">0</span></p>
@@ -17,26 +37,75 @@ document.body.innerHTML = `
   </div>
 
   <div style="text-align: left;">
-    <button id="Ramen" style="width:240px; height:240px;">
-      <img src="${chashuRamen}" class="icon" style="text-align: center; width:230px; height:240px;" />
+    <button id="Ramen" style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  ">
+      <img src="${chashuRamen}" class="ramen-icon" style="text-align: center; width:230px; height:240px;" />
     </button>
   </div>
 
   <div style="text-align: bottom;">
-  <button id="Chefs" disabled>
-  More Chefs(+0.5/sec, 10 🍜) <img src="${chefimage}" class="icon" style="text-align: center; width:80px; height:80px;" /> 
+  <button id="Chefs" disabled style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  "> 
+  More Chefs(+0.5/sec, 10 🍜) <img src="${chefimage}" class="chef-icon" style="text-align: center; width:80px; height:80px;" /> 
   </button>
-  <button id="Waiters" disabled>
-  More Waiters(+2/sec, 100 🍜) <img src="${waiterimage}" class="icon" style="text-align: center; width:80px; height:80px;" />  
+  <button id="Waiters" disabled style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  ">
+  More Waiters(+2/sec, 100 🍜) <img src="${waiterimage}" class="waiter-icon" style="text-align: center; width:80px; height:80px;" />  
   </button>
-  <button id="Belts" disabled>
-  More Conveyer(+50/sec, 1000 🍜) <img src="${beltimage}" class="icon" style="text-align: center; width:80px; height:80px;" /> 
+  <button id="Belts" disabled style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  ">
+  More Conveyer(+50/sec, 1000 🍜) <img src="${beltimage}" class="belt-icon" style="text-align: center; width:80px; height:80px;" /> 
   </button>
-  <button id="Delivery" disabled>
-  More Delivery(+100/sec, 5000 🍜) <img src="${deliveryimage}" class="icon" style="text-align: center; width:80px; height:80px;" /> 
+  <button id="Delivery" disabled style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  ">
+  More Delivery(+100/sec, 5000 🍜) <img src="${deliveryimage}" class="delivery-icon" style="text-align: center; width:80px; height:80px;" /> 
   </button>
-  <button id="Manager" disabled>
-  More Managers(+500/sec, 20000 🍜) <img src="${managerimage}" class="icon" style="text-align: center; width:80px; height:80px;" /> 
+  <button id="Manager" disabled style="   
+  color: red;
+  background-color: yellow;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  ">
+  More Managers(+500/sec, 20000 🍜) <img src="${managerimage}" class="manager-icon" style="text-align: center; width:80px; height:80px;" /> 
   </button>
   </div>
 `;
