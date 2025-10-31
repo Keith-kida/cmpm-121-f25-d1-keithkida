@@ -7,3 +7,5 @@ I just finished and was able to add:
 -Automatic clicking using setInterval
 -Continuous growth with requestAnimationFrame
 -Purchasing an upgrade
+
+-I also changed the design of my buttons from mrpoopers project and added a more themefitting background thanks to uriosteguim12.
