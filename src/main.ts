@@ -1,6 +1,7 @@
 import chashuRamen from "./chashu-ramen-3d-icon-png-download-9666063.png";
 import beltimage from "./conveyor-belt.png";
 import deliveryimage from "./delivery-man.png";
+import slurp from "./drink-slurp-ahh-sfx-425031.mp3";
 import managerimage from "./manager.png";
 import backgroundimage from "./ramen-backgound.png";
 import chefimage from "./ramen-jiro-rice-soup-menu-png.png";
@@ -195,6 +196,10 @@ ramenButton.addEventListener("click", () => {
   ramen += 1;
   counterElement.textContent = Math.floor(ramen).toString();
   statusElement.textContent = `${ramenPerSecond.toFixed(1)} 🍜/sec`;
+
+  // Play slurp sound
+  const audio = new Audio(slurp);
+  audio.play();
 });
 
 // Purchase upgrade
