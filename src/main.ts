@@ -120,6 +120,11 @@ const statusElement = document.getElementById("status")!;
 const upgradesElement = document.getElementById("upgrades")!;
 const descriptionElement = document.getElementById("description")!;
 
+// Ramen variables
+let ramen: number = 0;
+let ramenPerSecond: number = 0;
+let displayedRamen: number = 0;
+
 interface Item {
   name: string;
   cost: number;
@@ -183,11 +188,6 @@ const availableItems: Item[] = [
 availableItems.forEach((item) => {
   item.button = document.getElementById(item.name) as HTMLButtonElement;
 });
-
-// Ramen variables
-let ramen: number = 0;
-let ramenPerSecond: number = 0;
-let displayedRamen: number = 0;
 
 // Upgrades
 
