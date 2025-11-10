@@ -111,16 +111,15 @@ document.body.innerHTML = `
   </div>
 `;
 
-// Add click handler
+// Add click handler --------------------------------------
 
 const ramenButton = document.getElementById("Ramen")!;
 const counterElement = document.getElementById("counter")!;
 const statusElement = document.getElementById("status")!;
-
 const upgradesElement = document.getElementById("upgrades")!;
 const descriptionElement = document.getElementById("description")!;
 
-// Ramen variables
+// Ramen variables --------------------------------------
 let ramen: number = 0;
 let ramenPerSecond: number = 0;
 let displayedRamen: number = 0;
@@ -189,7 +188,7 @@ availableItems.forEach((item) => {
   item.button = document.getElementById(item.name) as HTMLButtonElement;
 });
 
-// Upgrades
+// Upgrades --------------------------------------
 
 // Manual click adds ramen
 ramenButton.addEventListener("click", () => {
@@ -226,7 +225,7 @@ availableItems.forEach((item) => {
   });
 });
 
-// Automatically adds ramen once per second
+// Automatically adds ramen once per second --------------------------------------
 setInterval(() => {
   ramen += ramenPerSecond;
   counterElement.textContent = ramen.toString();
@@ -236,7 +235,7 @@ setInterval(() => {
   statusElement.textContent = `${ramenPerSecond.toFixed(1)} 🍜/sec`;
 }, 1000);
 
-// Smoothly animate the counter
+// Smoothly animate the counter --------------------------------------
 function animate() {
   displayedRamen += (ramen - displayedRamen) * 0.1;
   counterElement.textContent = Math.floor(displayedRamen).toString();
